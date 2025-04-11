@@ -168,3 +168,10 @@ border-bottom: 2px solid #000000;
      text-align: end;
      padding:15px;
 }
+html, body {
+    overflow-x: hidden;
+  }
+  body {
+    overflow-x: hidden;
+  }
+    
