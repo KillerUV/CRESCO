@@ -1,8 +1,8 @@
 const questions = [
   {
-    question: "What is the capital of France?",
-    options: ["A) Berlin", "B) Madrid", "C) Paris", "D) Rome"],
-    correctAnswer: "c",
+    question: " Who developed the theory of relativity?",
+    options: ["A)Harshit", "B) Newton", "C) Albert Einstein", "D) Narendra Modi"],
+    correctAnswer: "a",
   },
   {
     question: "Which planet is known as the Red Planet?",
@@ -15,9 +15,9 @@ const questions = [
     correctAnswer: "b",
   },
   {
-    question: " Who developed the theory of relativity?",
-    options: ["A)Albert Einstein", "B) Harshit Pandey", "C) Newton sir", "D) Dr Doom"],
-    correctAnswer: "a",
+    question: "What is the capital of France?",
+    options: ["A) Berlin", "B) Madrid", "C) Paris", "D) Rome"],
+    correctAnswer: "c",
   },
   {
     question: " What is the boiling point of water?",
@@ -66,7 +66,7 @@ function loadQuestion() {
 
   options.forEach((button, index) => {
     button.textContent = currentQuestion.options[index];
-    button.onclick = () => checkAnswer(String.fromCharCode(97 + index)); // 'a', 'b', 'c', 'd'
+    button.onclick = () => checkAnswer(String.fromCharCode(97 + index)); // 'a', 'b', 'c', 'd' check karne k liye hai
   });
 
   document.getElementById("result").textContent = "";
@@ -77,9 +77,9 @@ function checkAnswer(selectedOption) {
 
   if (selectedOption === currentQuestion.correctAnswer) {
     score++;
-    document.getElementById("result").textContent = "Correct!";
+    document.getElementById("result").textContent = "Correct hai waah!";
   } else {
-    document.getElementById("result").textContent = "Wrong! The correct answer was " + currentQuestion.correctAnswer.toUpperCase();
+    document.getElementById("result").innerHTML = ` Wrong hai chii! <br> The correct answer was ` + currentQuestion.correctAnswer.toUpperCase();
   }
 
   setTimeout(() => {
@@ -94,7 +94,7 @@ function checkAnswer(selectedOption) {
 
 function showFinalScore() {
   const quizBox = document.querySelector(".quiz-box");
-  quizBox.innerHTML = `<h2>Quiz Completed <br> moj karo yay😁!!</h2><p>Your score: ${score}/${questions.length}</p>`;
+  quizBox.innerHTML = `<h2>Quiz Completed  <br> moj karo yay😁!!</h2><p>Your score: ${score}/${questions.length}</p>`;
 }
 document.addEventListener("DOMContentLoaded", loadQuestion);
 
