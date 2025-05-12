@@ -119,7 +119,7 @@ const quizBox = document.querySelector(".quiz-container");
 
 let askedQuestions = [];
 let score = 0;
-let totalQuestions = 10;
+let totalQuestions = 11;
 
 function getRandomQuestion() {
   let index;
