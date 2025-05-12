@@ -157,7 +157,7 @@ submitButton.addEventListener("click", () => {
        const quizBox = document.querySelector(".quiz-box");
       quizBox.innerHTML = `<h2>Quiz Completed 🎉</h2><p>Your score: ${score} / ${totalQuestions}</p>`;
     }
-  }, 1000);
+  }, 5000);
 });
 
 showQuestion();
