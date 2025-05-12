@@ -1,7 +1,12 @@
 const questions = [
   {
     question: " Who developed the theory of relativity?",
-    options: ["A)Harshit", "B) Newton", "C) Albert Einstein", "D) Narendra Modi"],
+    options: [
+      "A)Harshit",
+      "B) Newton",
+      "C) Albert Einstein",
+      "D) Narendra Modi",
+    ],
     correctAnswer: "a",
   },
   {
@@ -21,7 +26,12 @@ const questions = [
   },
   {
     question: " What is the boiling point of water?",
-    options: ["A) 100 deg f", "B)100 deg c ", "C)100 kelvin ", "D)173.5 kelvin "],
+    options: [
+      "A) 100 deg f",
+      "B)100 deg c ",
+      "C)100 kelvin ",
+      "D)173.5 kelvin ",
+    ],
     correctAnswer: "b",
   },
   {
@@ -31,12 +41,22 @@ const questions = [
   },
   {
     question: " Who wrote the famous novel-To Kill a Mockingbird? ",
-    options: ["A)F. Scott Fitzgeral", "B) Harper Lee ", "C)Jane Austen ", "D)J.K. Rowling "],
+    options: [
+      "A)F. Scott Fitzgeral",
+      "B) Harper Lee ",
+      "C)Jane Austen ",
+      "D)J.K. Rowling ",
+    ],
     correctAnswer: "b",
   },
   {
     question: "Who was the first President of the United States? ",
-    options: ["A)Thomas Jefferson", "B)Abraham Lincoln ", "C)George Washington ", "D)Franklin D. Roosevelt "],
+    options: [
+      "A)Thomas Jefferson",
+      "B)Abraham Lincoln ",
+      "C)George Washington ",
+      "D)Franklin D. Roosevelt ",
+    ],
     correctAnswer: "c",
   },
   {
@@ -54,14 +74,12 @@ const questions = [
 let currentQuestionIndex = 0;
 let score = 0;
 
-
 function loadQuestion() {
   const questionElement = document.getElementById("question");
   const options = document.querySelectorAll(".option");
 
   const currentQuestion = questions[currentQuestionIndex];
 
- 
   questionElement.textContent = currentQuestion.question;
 
   options.forEach((button, index) => {
@@ -79,7 +97,9 @@ function checkAnswer(selectedOption) {
     score++;
     document.getElementById("result").textContent = "Correct hai waah!";
   } else {
-    document.getElementById("result").innerHTML = ` Wrong hai chii! <br> The correct answer was ` + currentQuestion.correctAnswer.toUpperCase();
+    document.getElementById("result").innerHTML =
+      ` Wrong hai chii! <br> The correct answer was ` +
+      currentQuestion.correctAnswer.toUpperCase();
   }
 
   setTimeout(() => {
@@ -97,5 +117,3 @@ function showFinalScore() {
   quizBox.innerHTML = `<h2>Quiz Completed  <br> moj karo yay😁!!</h2><p>Your score: ${score}/${questions.length}</p>`;
 }
 document.addEventListener("DOMContentLoaded", loadQuestion);
-
-

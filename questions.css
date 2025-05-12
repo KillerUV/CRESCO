@@ -25,7 +25,7 @@
     background-color: white;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 10px 11px rgba(0, 153, 15, 0.1);
+    box-shadow: 0 5px 1px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: 400px;
   }
