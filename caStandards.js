@@ -1,4 +1,4 @@
-const header = " What is the Accounting Standard (AS)"
+const header = " What is the Accounting Standard (AS) "
 const header2 = "AS"
 const questions = [
   
@@ -39,7 +39,7 @@ const questions = [
     correctAnswer: "the effects of changes in foreign exchange rates",
   },
   {
-    question: "2",
+    question: "12",
     correctAnswer: "accounting for government grants",
   },
   {
@@ -137,20 +137,9 @@ function getQuestionType() {
   return index
 }
 
-function getCorrectAns() {
-  let correctAns;
-  if (currentQuestionType == 0) {
-    correctAns = currentQuestion.correctAnswer.trim().toLowerCase();
-  } else {
-    correctAns = currentQuestion.question.trim().toLowerCase();
-  }
-  return correctAns
-}
-  
-
 let currentQuestion;
 let currentQuestionType;
-
+ 
 function showQuestion() {
   currentQuestion = getRandomQuestion();
   currentQuestionType = getQuestionType();
@@ -161,6 +150,19 @@ function showQuestion() {
   }
   answerInput.value = "";
   resultElement.textContent = "";
+  console.log(currentQuestionTy) 
+  return 0
+}
+
+function getCorrectAns() {
+  let correctAns;
+  console.log(currentQuestionType) 
+  if (currentQuestionType == 0) {
+    correctAns = currentQuestion.correctAnswer.trim().toLowerCase();
+  } else {
+    correctAns = currentQuestion.question.trim().toLowerCase();
+  }
+  return correctAns
 }
 
 submitButton.addEventListener("click", () => {
@@ -183,5 +185,4 @@ submitButton.addEventListener("click", () => {
     }
   }, 5000);
 });
-
 showQuestion();
